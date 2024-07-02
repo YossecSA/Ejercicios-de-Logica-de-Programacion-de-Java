@@ -1,4 +1,4 @@
-package estructuracontrol;
+package estructuracontrol.ifteoira;
 
 import java.util.Scanner;
 
