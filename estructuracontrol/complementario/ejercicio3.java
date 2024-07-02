@@ -24,10 +24,13 @@ public class ejercicio3 {
 
         if (edad < 18 && edad >= 0) {
             mensaje = "Eres menor de edad";
+
         } else if (edad >= 18 && edad <= 64) {
             mensaje = "Eres adulto";
-        } else if (edad >= 65) {
+
+        } else if (edad >= 65 && edad <= 120) {
             mensaje = "Eres un adulto mayor";
+            
         } else {
             mensaje = "La edad es incorrecta";
         }
