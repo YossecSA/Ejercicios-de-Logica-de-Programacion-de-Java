@@ -13,22 +13,23 @@ public class reemplazo {
         // ingresada por el usuario. Muestra la frase resultante en pantalla.
 
         try {
-            System.out.println("Ingresa una frase:");
+            System.out.print("Ingresa una frase:");
             String frase = sc.nextLine();
 
-            System.out.println("Ingresa el primer carácter (a ser reemplazado):");
+            System.out.print("Ingresa el primer carácter (a ser reemplazado):");
             char primerCaracter = sc.next().charAt(0);
 
-            System.out.println("Ingresa el segundo carácter (reemplazo):");
+            System.out.print("Ingresa el segundo carácter (reemplazo):");
             char segundoCaracter = sc.next().charAt(0);
 
             String fraseModificada = frase.replace(primerCaracter, segundoCaracter);
 
-            // Mostrar la frase resultante en pantalla
             System.out.println("La frase resultante es: " + fraseModificada);
-            
+
+        } catch (StringIndexOutOfBoundsException e) {
+            System.out.println("no puedes enviar vacio");
+
         } catch (Exception e) {
-            // TODO: handle exception
             System.out.println("Error: " + e);
         } finally {
 
