@@ -1,5 +1,6 @@
 package wrappers;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ejercicio {
@@ -9,7 +10,7 @@ public class ejercicio {
         // conversion(sc);
         // cadena(sc);
         // contador(sc);
-        //suma(sc);
+        // suma(sc);
         contadorDigitos(sc);
         sc.close();
     }
@@ -126,19 +127,31 @@ public class ejercicio {
     // y luego utiliza un bucle y Character.isDigit() para contar el número de
     // dígitos en el número.
 
-    public static void contadorDigitos(Scanner scanner){
-        System.out.println("Introduce un número:");
-        String input = scanner.nextLine();
+    public static void contadorDigitos(Scanner scanner) {
 
-        int digitCount = 0;
-        
-        for (int i = 0; i < input.length(); i++) {
-            char c = input.charAt(i);
-            if (Character.isDigit(c)) {
-                digitCount++;
+        try {
+            System.out.println("Introduce un número:");
+            int input = scanner.nextInt();
+
+            String inpuString = Integer.toString(input);
+
+            int digitCount = 0;
+
+            for (int i = 0; i < inpuString.length(); i++) {
+                char c = inpuString.charAt(i);
+                if (Character.isDigit(c)) {
+                    digitCount++;
+                }
             }
+            System.out.println("El número de dígitos en el número es: " + digitCount);
+
+        } catch (InputMismatchException e) {
+
+            System.out.println("El numero ingresado contiene letras");
+
+        } catch (Exception e) {
+            System.out.println("error inesperado: " + e.getMessage());
         }
 
-        System.out.println("El número de dígitos en el número es: " + digitCount);
     }
 }
