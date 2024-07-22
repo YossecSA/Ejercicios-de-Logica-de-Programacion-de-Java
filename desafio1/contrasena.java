@@ -40,8 +40,11 @@ public class contrasena {
             }
         }
 
-        String contraseñaStr = new String(password);
-        System.out.println("Contraseña generada: " + contraseñaStr);
+        String mensaje = "";
+        for (char c : password) {
+            mensaje +=c;
+        }
+        System.out.println("Contraseña generada: " + mensaje);
 
         sc.close();
     }

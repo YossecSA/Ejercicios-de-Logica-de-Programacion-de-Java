@@ -16,7 +16,7 @@ public class estadisticas {
         String[] notasAleatorias = new String[cantidad];
 
         for (int i = 0; i < notasAleatorias.length; i++) {
-            notasAleatorias[i] = String.valueOf(random.nextInt(20));
+            notasAleatorias[i] = String.valueOf(random.nextInt(10));
         }
 
         Double[] desaprobados = new Double[cantidad];
