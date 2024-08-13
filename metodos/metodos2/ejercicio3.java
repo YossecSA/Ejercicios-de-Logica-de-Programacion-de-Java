@@ -40,5 +40,6 @@ public class ejercicio3 {
             case 60 -> "D"; // nota entre 60-69
             default -> "F"; // nota menos de 60
         };
+        
     }
 }
